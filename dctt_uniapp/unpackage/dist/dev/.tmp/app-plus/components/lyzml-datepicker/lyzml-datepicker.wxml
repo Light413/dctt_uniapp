@@ -1,0 +1,1 @@
+<view><picker mode="multiSelector" range="{{dateSelectorRange}}" value="{{selectedDateValue}}" data-event-opts="{{[['columnchange',[['onDateColumnChange',['$event']]]],['change',[['onDateChange',['$event']]]]]}}" bindcolumnchange="__e" bindchange="__e"><view>{{currSelectedDate}}</view></picker></view>

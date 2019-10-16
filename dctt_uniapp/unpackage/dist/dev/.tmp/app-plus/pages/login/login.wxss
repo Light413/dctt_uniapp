@@ -1,0 +1,34 @@
+
+input{
+		padding: 15px;
+		text-align: center;
+		border-width: 0;
+		border-bottom-width: 1px;
+		border-color: #f0f0f0;
+		border-style: solid;
+		font-size: 15px;
+}
+.login-btn{
+		color: #434343;
+		font-size: 13px;
+		background-color: white;
+		border-width: 0;
+		border-radius: 0;
+}
+	/* 	uni-button:after {
+	    content: " ";
+	    width: 200%;
+	    height: 200%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    border: 0px solid rgba(0,0,0,0);
+	    -webkit-transform: scale(.5);
+	    transform: scale(.5);
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    box-sizing: border-box;
+	    border-radius: 0px;
+	}
+	 */
+

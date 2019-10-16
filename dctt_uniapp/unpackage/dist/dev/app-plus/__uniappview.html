@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+                CSS.supports('top: constant(a)'))
+            document.write(
+                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"demo","entryPagePath":"pages/home/index.html","page":{"pages/home/index.html":{"window":{"navigationBarTitleText":"郸城头条","enablePullDownRefresh":true,"navigationBarTextStyle":"white","navigationBarBackgroundColor":"#ff4500","backgroundColor":"#F8F8F8","titleNView":{"type":"transparent"},"usingComponents":{"uni-swiper-dot":"/components/uni-swiper-dot/uni-swiper-dot","uni-grid":"/components/uni-grid/uni-grid","home-sub-list":"/components/home-sub-list","uni-load-more":"/components/uni-load-more/uni-load-more"}}},"pages/publish/pub-select-type.html":{"window":{"navigationBarTitleText":"发布动态","navigationBarTextStyle":"white","navigationBarBackgroundColor":"#ff4500","backgroundColor":"#F8F8F8","usingComponents":{}}},"pages/me/me.html":{"window":{"navigationBarTitleText":"个人中心","navigationBarTextStyle":"white","navigationBarBackgroundColor":"#ff4500","backgroundColor":"#F8F8F8","usingComponents":{"uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item"}}},"pages/login/login.html":{"window":{"usingComponents":{}}},"pages/login/register.html":{"window":{"usingComponents":{}}},"pages/me/userinfo.html":{"window":{"navigationBarTitleText":"修改资料","usingComponents":{"lyzml-datepicker":"/components/lyzml-datepicker/lyzml-datepicker","uni-list":"/components/uni-list/uni-list","uni-icons":"/components/uni-icons/uni-icons","mpvue-picker":"/components/mpvue-picker/mpvuePicker","mpvue-city-picker":"/components/mpvue-citypicker/mpvueCityPicker"}}},"pages/me/setter.html":{"window":{"navigationBarTitleText":"设置","usingComponents":{"uni-list":"/components/uni-list/uni-list","uni-list-item":"/components/uni-list-item/uni-list-item"}}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#F8F8F8","navigationBarTitleText":"","backgroundColor":"#E5E5E5"}},"tabBar":{"color":"#7A7E83","selectedColor":"#444444","backgroundColor":"#ffffff","borderStyle":"black","list":[{"pagePath":"pages/home/index.html","iconPath":"/static/tab/tab_icon_home_normal@2x.png","selectedIconPath":"/static/tab/tab_icon_home_selected@2x.png","text":"首页"},{"pagePath":"pages/publish/pub-select-type.html","iconPath":"static/tab/tab_icon_pub@2x.png","selectedIconPath":"static/tab/tab_icon_pub@2x.png","text":"发布"},{"pagePath":"pages/me/me.html","iconPath":"static/tab/tab_icon_me_normal@2x.png","selectedIconPath":"static/tab/tab_icon_me_selected@2x.png","text":"个人中心"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/home/index","pages/publish/pub-select-type","pages/me/me","pages/login/login","pages/login/register","pages/me/userinfo","pages/me/setter"],"nvueCompiler":"weex","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":false,"autoclose":true},"compilerVersion":"2.3.3","usingComponents":{"lyzml-datepicker":"/components/lyzml-datepicker/lyzml-datepicker"}}
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                var wxss = page.replace('.html', '.wxss')
+                if (
+                    typeof __wxAppCode__ !== 'undefined' &&
+                    __wxAppCode__.hasOwnProperty(wxss)
+                ) {
+                    var setCssToHead = __wxAppCode__[wxss]
+                    typeof setCssToHead === 'function' && setCssToHead()
+                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
+                        detail: {
+                            generateFunc: $gwx(page.replace('.html', '.wxml'))
+                        }
+                    }));
+                } else {
+                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+                }
+            };
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

@@ -1,0 +1,1 @@
+<view class="read-cnt"><view class="readCtn">{{"阅读"+readCnt}}</view><view class="type-name">{{typeName}}</view></view>

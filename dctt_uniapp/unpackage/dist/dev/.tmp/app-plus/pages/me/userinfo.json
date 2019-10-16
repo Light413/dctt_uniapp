@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "修改资料",
+  "usingComponents": {
+    "lyzml-datepicker": "/components/lyzml-datepicker/lyzml-datepicker",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-icons": "/components/uni-icons/uni-icons",
+    "mpvue-picker": "/components/mpvue-picker/mpvuePicker",
+    "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker"
+  }
+}
