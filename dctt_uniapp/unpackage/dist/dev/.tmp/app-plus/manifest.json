@@ -5,13 +5,13 @@
     "iPad"
   ],
   "id": "__UNI__9804607",
-  "name": "demo",
+  "name": "郸城头条M版",
   "version": {
     "name": "1.0.0",
     "code": "100"
   },
-  "description": "",
-  "launch_path": "__uniapptabbar.html",
+  "description": "build20191015",
+  "launch_path": "__uniappview.html",
   "developer": {
     "name": "",
     "email": "",
@@ -24,7 +24,7 @@
   },
   "plus": {
     "useragent": {
-      "value": "uni-app appservice",
+      "value": "uni-app",
       "concatenate": true
     },
     "splashscreen": {
@@ -33,7 +33,11 @@
       "delay": 0
     },
     "popGesture": "close",
-    "launchwebview": {},
+    "launchwebview": {
+      "id": "1",
+      "kernel": "WKWebview",
+      "uni-app": "auto"
+    },
     "statusbar": {
       "immersed": "supportedDevice",
       "style": "dark",
@@ -137,18 +141,41 @@
       }
     },
     "uni-app": {
-      "compilerVersion": "2.3.3",
+      "compilerVersion": "2.3.7",
       "control": "v8",
       "nvueCompiler": "weex",
       "renderer": "auto"
     },
-    "secondwebview": {
-      "id": "1",
-      "launch_path": "__uniappview.html",
-      "kernel": "WKWebview",
-      "mode": "child",
-      "top": 0,
-      "bottom": 56
+    "tabBar": {
+      "color": "#7A7E83",
+      "selectedColor": "#444444",
+      "borderStyle": "rgba(0,0,0,0.4)",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/home/index",
+          "iconPath": "/static/tab/tab_icon_home_normal@2x.png",
+          "selectedIconPath": "/static/tab/tab_icon_home_selected@2x.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/publish/pub-select-type",
+          "iconPath": "static/tab/tab_icon_pub@2x.png",
+          "selectedIconPath": "static/tab/tab_icon_pub@2x.png",
+          "text": "发布"
+        },
+        {
+          "pagePath": "pages/me/me",
+          "iconPath": "static/tab/tab_icon_me_normal@2x.png",
+          "selectedIconPath": "static/tab/tab_icon_me_selected@2x.png",
+          "text": "个人中心"
+        }
+      ],
+      "height": "50px",
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
   }
 }

@@ -7,11 +7,12 @@
 				"enablePullDownRefresh": true,
 				
 				"navigationBarTextStyle": "#fff",
-				"navigationBarBackgroundColor": "#ff4500",
+				// "navigationBarBackgroundColor": "#ff4500",
+				"navigationBarBackgroundColor": "#0b60fa",
 				"backgroundColor": "#F8F8F8",
 				"app-plus":{
 					"titleNView": {
-						"type": "transparent"
+						// "type": "transparent"
 					}
 						
 				}
@@ -21,9 +22,10 @@
 		{
 			"path": "pages/publish/pub-select-type",
 			"style": {
-				"navigationBarTitleText": "发布动态",
+				"navigationBarTitleText": "发布动态"		,
 				"navigationBarTextStyle": "#fff",
-				"navigationBarBackgroundColor": "#ff4500",
+				// "navigationBarBackgroundColor": "#ff4500",
+				"navigationBarBackgroundColor": "#0b60fa",
 				"backgroundColor": "#F8F8F8"
 			}
 		},
@@ -33,13 +35,23 @@
 			"style": {
 				"navigationBarTitleText": "个人中心",
 				"navigationBarTextStyle": "#fff",
-				"navigationBarBackgroundColor": "#ff4500",
+				// "navigationBarBackgroundColor": "#ff4500",
+				"navigationBarBackgroundColor": "#0b60fa",
 				"backgroundColor": "#F8F8F8",
 				"app-plus":{
 					
 				}
 			}
 		},
+		
+		//////////个人中心
+		{
+			"path":"pages/home/home-list",
+			"style":{
+				"enablePullDownRefresh": true
+			}
+		},
+		
 		{
 			"path":"pages/login/login",
 			"style":{
@@ -59,6 +71,24 @@
 			"path":"pages/me/setter",
 			"style":{
 				"navigationBarTitleText":"设置"
+			}
+		},
+		{
+			"path":"components/webview",
+			"style":{
+				"navigationBarTitleText":""
+			}
+		},
+		{
+			"path":"pages/me/about-us",
+			"style":{
+				"navigationBarTitleText":"关于我们"
+			}
+		},
+		{
+			"path":"pages/home/detail",
+			"style":{
+				"navigationBarTitleText":"动态详情"
 			}
 		}
 		

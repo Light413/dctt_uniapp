@@ -3,10 +3,14 @@
     "pages/home/index",
     "pages/publish/pub-select-type",
     "pages/me/me",
+    "pages/home/home-list",
     "pages/login/login",
     "pages/login/register",
     "pages/me/userinfo",
-    "pages/me/setter"
+    "pages/me/setter",
+    "components/webview",
+    "pages/me/about-us",
+    "pages/home/detail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -46,8 +50,8 @@
     "alwaysShowBeforeRender": false,
     "autoclose": true
   },
-  "appname": "demo",
-  "compilerVersion": "2.3.3",
+  "appname": "郸城头条M版",
+  "compilerVersion": "2.3.7",
   "usingComponents": {
     "lyzml-datepicker": "/components/lyzml-datepicker/lyzml-datepicker"
   }

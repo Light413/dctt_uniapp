@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "uni-load-more": "/components/uni-load-more/uni-load-more",
-    "read-cnt": "/components/read-cnt"
-  },
-  "component": true
-}

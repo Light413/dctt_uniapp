@@ -1636,6 +1636,9 @@ radio-group label, checkbox-group label{
             transform: translateY(50%);
 }
 /*每个页面公共css */
-
+image{
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
 
 

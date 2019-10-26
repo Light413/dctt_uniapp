@@ -2,6 +2,7 @@
 var URL = {
 	base:'http://39.106.164.101:80/tt/',
 	getsy:'getPostList.php',
+	detail:'getSinglePost.php',
 	publish:'publish.php',
 	comment:'comment.php',
 	dtdetail:'detail.php',
@@ -68,7 +69,8 @@ function getItemCategory(type){
 function uniPost(url , pars , success , error){
 	uni.getNetworkType({
 		success: (res) => {
-			if(res.networkType == 'none')uni.showToast({title:'无法连接网络' , icon:"none"});
+			console.log("---netType: " + JSON.stringify(res));
+			// if(res.networkType == 'none')uni.showToast({title:'无法连接网络' , icon:"none"});
 		}
 	});
 
@@ -142,7 +144,8 @@ function uniUploadFile(url , pars , files, success , error){
 module.exports = {
 	post:uniPost,
 	url:URL,
-	uploadfile:uniUploadFile
+	uploadfile:uniUploadFile,
+	postType:getItemCategory
 }
 
 /*

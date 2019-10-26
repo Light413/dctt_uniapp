@@ -1,7 +1,7 @@
 {
-    "name" : "demo",
+    "name" : "郸城头条M版",
     "appid" : "__UNI__9804607",
-    "description" : "20191015",
+    "description" : "build20191015",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,

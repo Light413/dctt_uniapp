@@ -26,18 +26,18 @@ var homeTopItems = [
 		invaild:1
 	},
 			{
-		text:'交友',
+		text:'相亲交友',
 		image:'home-top-jy@2x.png',
 		type:15,
 		invaild:1
 	},
 		{
-		text:'签到',
-		image:'home-top5.png',
+		text:'求职招聘',
+		image:'home-top-qz@2x.png',
 		type:16,
 		invaild:1
 	},{
-		text:'更多',
+		text:'便民信息',
 		image:'home-top-more@2x.png',
 		type:17
 	}
@@ -117,7 +117,56 @@ var itemType = [
 		'title':'便民信息',
 	}]
 	];
-	
+
+//发布类型
+var itemType_new = [
+	[
+		[
+			{
+				'id':'10',	
+				'text':'新鲜事',
+			},
+			{
+				'id':'11',	
+				'text':'打听',
+			}
+		],
+		[
+			{
+				'id':'12',	
+				'text':'吐槽',
+			},
+			{
+				'id':'13',	
+				'text':'公告',
+			}
+		]
+	],
+	[
+		[
+			{
+				'id':'21',	
+				'text':'求职招聘',
+			},
+			{
+				'id':'22',	
+				'text':'商家信息',
+			},
+		],
+		[
+			{
+				'id':'23',	
+				'text':'相亲交友',
+			},
+			{
+				'id':'27',	
+				'text':'便民信息',
+			}
+		]
+	]
+];
+		
+		
 //动态审核状态
 var itemStatus = {
 	'0':'待审核',
@@ -125,10 +174,23 @@ var itemStatus = {
 	'2':'未通过',
 };
 
+function postSubType(t1,t2){
+	var s ='';
+	switch (t1){
+		case '21': s = t2 == 1 ? '招聘' : '求职';break;
+		case '23': s = t2 == 1 ? '我是女生' : '我是男生';break;
+		case '24':s = t2 == 1 ? '我要找房' : '我是房主';break;
+		case '25':s = t2 == 1 ? '人找车' : '车找人';break;
+		default:break;
+	}
+	return s;
+}
+
 module.exports = {
 	titleForType:titleForType,
 	homeAvaliableItemType:homeAvaliableItemType,
-	itemType:itemType,
+	itemType:itemType_new,
 	itemStatus:itemStatus,
-	homeTopItems:homeTopItems
+	homeTopItems:homeTopItems,
+	postSubType:postSubType
 }

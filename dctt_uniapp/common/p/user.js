@@ -33,6 +33,14 @@ function getDtImageUrl(thumbUrl , defaultUrl){
 	return thumbUrl || defaultUrl;
 }
 
+function userAvatar(user , defaultAvatar){
+	var u_avatar = user['avatar_thumb'];
+	if(u_avatar == null || u_avatar == ''){
+		u_avatar = defaultAvatar;
+	}
+	return u_avatar;
+}
+			
 module.exports = {
 	userInfo:getUserInfo,
 	uid:getLoginUid,

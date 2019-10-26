@@ -36,9 +36,6 @@
 			}
 		},
 		onLoad() {
-			// this.isLogined = USER.isLogined();
-		},
-		onShow() {
 			plus.cache.calculate(size => {
 				let s = parseFloat(size / (1024 * 1024)).toFixed(2) + "M";
 				console.log(s);
@@ -48,8 +45,7 @@
 		methods:{
 			listSelected (i) {
 				switch (i){
-					case 2:
-					//清除缓存
+					case 2://清除缓存
 					uni.showModal({
 					    title: '提示',
 					    content: '此操作会删除本地缓存信息,确定清除?',
@@ -69,9 +65,9 @@
 					    }
 					});
 					break;
-					// case 3:uni.navigateTo({
-					// 	url:'setter'
-					// });break;
+					case 4:uni.navigateTo({
+						url:'about-us'
+					});break;
 					default:break;
 				}
 			},

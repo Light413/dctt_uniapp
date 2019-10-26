@@ -2,15 +2,13 @@
   "navigationBarTitleText": "郸城头条",
   "enablePullDownRefresh": true,
   "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#ff4500",
+  "navigationBarBackgroundColor": "#0b60fa",
   "backgroundColor": "#F8F8F8",
-  "titleNView": {
-    "type": "transparent"
-  },
+  "titleNView": {},
   "usingComponents": {
     "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
     "uni-grid": "/components/uni-grid/uni-grid",
-    "home-sub-list": "/components/home-sub-list",
+    "home-list-item": "/components/home-list-item",
     "uni-load-more": "/components/uni-load-more/uni-load-more"
   }
 }

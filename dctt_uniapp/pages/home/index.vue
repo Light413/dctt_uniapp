@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<uni-swiper-dot :info="swiperImages" :current="current" :mode="mode" :dots-styles="dotsStyles">
-			<swiper class="swiper-box" @change="change" autoplay="true" style="height: 180px;">
+			<swiper class="swiper-box" @change="change" autoplay="true" style="height: 150px;">
 				<swiper-item v-for="(item ,index) in swiperImages" :key="index">
 					<view class="swiper-item">
 						<image :src="item.url" />
@@ -9,9 +9,9 @@
 				</swiper-item>
 			</swiper>
 		</uni-swiper-dot>
-		<uni-grid :options="itemType" :show-border="false"  :column-num="4"/>
+		<uni-grid :options="itemType" :show-border="false"  :column-num="4"  @click="onClick"/>
 		
-		<home-sub-list @loadingStatus="loadingStatus" ref="homeSubList"></home-sub-list>
+		<home-list-item @loadingStatus="loadingStatus" ref="homeListItem" />
 		<uni-load-more :status="status" :content-text="contentText" />
 	</view>
 </template>
@@ -20,19 +20,20 @@
 	import uniLoadMore from '@/components/uni-load-more/uni-load-more.vue';
 	import uniSwiperDot from '@/components/uni-swiper-dot/uni-swiper-dot.vue';
 	import uniGrid from '@/components/uni-grid/uni-grid.vue';
-	import homeSubList from '@/components/home-sub-list.vue';
+	import homeListItem from '@/components/home-list-item.vue';
 	var baseData = require("@/common/p/base-data.js");
 
 	export default {
 		components: {
 			uniSwiperDot,
 			uniGrid,
-			homeSubList,
+			homeListItem,
 			uniLoadMore
 		},
 		data() {
 			return {
-				swiperImages: [{url: "../../static/images/home/home_top_banner1.png"},
+				swiperImages: [
+					{url: "../../static/images/home/home_top_banner1.png"},
 					{url: '../../static/images/home/home_top_banner2.png'},
 					{url: '../../static/images/home/home_top_banner3.png'}],
 
@@ -65,15 +66,15 @@
 		},
 		
 		onPullDownRefresh() {
-			this.$refs.homeSubList.pageNumber = 1;
-			this.$refs.homeSubList.loadData();
+			this.$refs.homeListItem.pageNumber = 1;
+			this.$refs.homeListItem.loadData();
 		},
 		onReachBottom() {
 			if (this.status == 'noMore')return;
 			this.status = 'loading';
 			
-			this.$refs.homeSubList.pageNumber = this.$refs.homeSubList.pageNumber + 1;
-			this.$refs.homeSubList.loadData();
+			this.$refs.homeListItem.pageNumber = this.$refs.homeListItem.pageNumber + 1;
+			this.$refs.homeListItem.loadData();
 		},
 		
 		
@@ -83,6 +84,13 @@
 			},
 			loadingStatus(e){
 				this.status = e;
+			},
+			onClick(e){
+				var i = e.index;
+				var item = this.itemType[i];
+				uni.navigateTo({
+					url:'home-list?t=' + item['text'] + '&id=' + item['type']
+				})
 			}
 		}
 	}
