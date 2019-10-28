@@ -154,19 +154,20 @@
       "list": [
         {
           "pagePath": "pages/home/index",
-          "iconPath": "/static/tab/tab_icon_home_normal@2x.png",
+          "iconPath": "/static/tab/shouye@2x.png",
           "selectedIconPath": "/static/tab/tab_icon_home_selected@2x.png",
           "text": "首页"
         },
         {
           "pagePath": "pages/publish/pub-select-type",
-          "iconPath": "static/tab/tab_icon_pub@2x.png",
-          "selectedIconPath": "static/tab/tab_icon_pub@2x.png",
-          "text": "发布"
+          "iconPath": "static/tab/fabu-2.png",
+          "selectedIconPath": "static/tab/tab_icon_pub_selected@2x.png",
+          "text": "发布",
+          "selectedColor": "#0b60fa"
         },
         {
           "pagePath": "pages/me/me",
-          "iconPath": "static/tab/tab_icon_me_normal@2x.png",
+          "iconPath": "static/tab/wode@2x.png",
           "selectedIconPath": "static/tab/tab_icon_me_selected@2x.png",
           "text": "个人中心"
         }

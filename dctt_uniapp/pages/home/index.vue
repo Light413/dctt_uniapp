@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<uni-swiper-dot :info="swiperImages" :current="current" :mode="mode" :dots-styles="dotsStyles">
-			<swiper class="swiper-box" @change="change" autoplay="true" style="height: 150px;">
+			<swiper class="swiper-box" @change="change" autoplay="true" style="height: 180px;">
 				<swiper-item v-for="(item ,index) in swiperImages" :key="index">
 					<view class="swiper-item">
 						<image :src="item.url" />
@@ -11,7 +11,7 @@
 		</uni-swiper-dot>
 		<uni-grid :options="itemType" :show-border="false"  :column-num="4"  @click="onClick"/>
 		
-		<home-list-item @loadingStatus="loadingStatus" ref="homeListItem" />
+		<home-list @loadingStatus="loadingStatus" ref="homeList" />
 		<uni-load-more :status="status" :content-text="contentText" />
 	</view>
 </template>
@@ -20,14 +20,14 @@
 	import uniLoadMore from '@/components/uni-load-more/uni-load-more.vue';
 	import uniSwiperDot from '@/components/uni-swiper-dot/uni-swiper-dot.vue';
 	import uniGrid from '@/components/uni-grid/uni-grid.vue';
-	import homeListItem from '@/components/home-list-item.vue';
+	import homeList from '@/components/home-list.vue';
 	var baseData = require("@/common/p/base-data.js");
 
 	export default {
 		components: {
 			uniSwiperDot,
 			uniGrid,
-			homeListItem,
+			homeList,
 			uniLoadMore
 		},
 		data() {
@@ -66,15 +66,15 @@
 		},
 		
 		onPullDownRefresh() {
-			this.$refs.homeListItem.pageNumber = 1;
-			this.$refs.homeListItem.loadData();
+			this.$refs.homeList.pageNumber = 1;
+			this.$refs.homeList.loadData();
 		},
 		onReachBottom() {
 			if (this.status == 'noMore')return;
 			this.status = 'loading';
 			
-			this.$refs.homeListItem.pageNumber = this.$refs.homeListItem.pageNumber + 1;
-			this.$refs.homeListItem.loadData();
+			this.$refs.homeList.pageNumber = this.$refs.homeList.pageNumber + 1;
+			this.$refs.homeList.loadData();
 		},
 		
 		

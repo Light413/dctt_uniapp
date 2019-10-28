@@ -3,6 +3,7 @@
 	<view class="uni-list">
 		<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(value ,key) in items" :key="key" style="flex-direction: column;align-items: flex-start;">
 			<view style="width: 100%;" v-on:click="openDetailPage(value)">
+				<!-- <list-item-cell v-if="comType=='default'" :value="value" :showType="type == 0"></list-item-cell> -->
 				<list-item-cell v-if="comType=='default'" :value="value" :showType="type == 0"></list-item-cell>
 				<shangjia v-else-if="comType=='sj'" :value="value"></shangjia>
 				<life-item-cell v-else-if="comType=='life'" :value="value"></life-item-cell>
@@ -22,7 +23,7 @@
 	var api = require('@/common/p/api.js');
 	
 	export default {
-		name:"homeListItem",
+		name:"homeList",
 		components:{
 			listItemCell,
 			shangjia,

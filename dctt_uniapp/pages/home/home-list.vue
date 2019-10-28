@@ -1,16 +1,16 @@
 <template>
 	<view>
-		<home-list-item @loadingStatus="loadingStatus" ref="homeListItem" :type="itemType"></home-list-item>
+		<home-list @loadingStatus="loadingStatus" ref="homeList" :type="itemType"></home-list>
 		<uni-load-more :status="status" :content-text="contentText"/>
 	</view>
 </template>
 
 <script>
-	import homeListItem from '@/components/home-list-item.vue'
+	import homeList from '@/components/home-list.vue'
 	import uniLoadMore from '@/components/uni-load-more/uni-load-more.vue';
 	export default {
 		components:{
-			homeListItem,
+			homeList,
 			uniLoadMore
 		},
 		data(){
@@ -32,14 +32,14 @@
 		},
 		
 		onPullDownRefresh() {
-			this.$refs.homeListItem.pageNumber = 1;
-			this.$refs.homeListItem.loadData();
+			this.$refs.homeList.pageNumber = 1;
+			this.$refs.homeList.loadData();
 		},
 		onReachBottom() {
 			if (this.status == 'noMore')return;
 			this.status = 'loading';
-			this.$refs.homeListItem.pageNumber = this.$refs.homeListItem.pageNumber + 1;
-			this.$refs.homeListItem.loadData();
+			this.$refs.homeList.pageNumber = this.$refs.homeList.pageNumber + 1;
+			this.$refs.homeList.loadData();
 		},
 		
 		methods: {

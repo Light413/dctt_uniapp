@@ -4,11 +4,13 @@
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#0b60fa",
   "backgroundColor": "#F8F8F8",
-  "titleNView": {},
+  "titleNView": {
+    "type": "transparent"
+  },
   "usingComponents": {
     "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
     "uni-grid": "/components/uni-grid/uni-grid",
-    "home-list-item": "/components/home-list-item",
+    "home-list": "/components/home-list",
     "uni-load-more": "/components/uni-load-more/uni-load-more"
   }
 }
